@@ -755,7 +755,7 @@ function kayako_create_ticket_department_specific_form($form, &$form_state)
     );
     $form['kayako_email_id'] = array(
         '#type' => 'textfield',
-        '#title' => t('Email IDSSS'),
+        '#title' => t('Email ID'),
         '#default_value' => $GLOBALS['user']->mail,
         '#size' => 60,
         '#maxlength' => 50,
