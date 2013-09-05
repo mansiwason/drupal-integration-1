@@ -640,6 +640,7 @@ function kayako_select_department_form($form, &$form_state)
         $form['department'] = array(
             '#type' => 'radios',
             '#title' => t('Department'),
+            '#required' => true,
             '#default_value' => isset($form_state['build_info']['args'][1]['department_id']) ? $form_state['build_info']['args'][1]['department_id'] : 0,
             '#options' => $options_array,
             '#description' => t('Select the applicable department'),
@@ -694,7 +695,7 @@ function kayako_select_department_form_submit($form, &$form_state)
         $ticket_post = $ticket->getFirstPost();
         for ($i = 0; $i < $form_state['number_files']; $i++) {
             $file = file_save_upload('file_' . $i, $validators);
-            if ($file != 0) {
+            if ($file) {
                 $na = $ticket_post->newAttachmentFromFile($file->uri);
                 $na->create();
             } else {
@@ -754,7 +755,7 @@ function kayako_create_ticket_department_specific_form($form, &$form_state)
     );
     $form['kayako_email_id'] = array(
         '#type' => 'textfield',
-        '#title' => t('Email ID'),
+        '#title' => t('Email IDSSS'),
         '#default_value' => $GLOBALS['user']->mail,
         '#size' => 60,
         '#maxlength' => 50,
@@ -864,6 +865,7 @@ function kayako_create_ticket_department_specific_form($form, &$form_state)
  *     <top department id> => array(
  *         'department' => <top department object>,
  *         'child_departments' => array(<child department object>, ...)
+ *     ),
  *     ),
  *     ...
  * )
