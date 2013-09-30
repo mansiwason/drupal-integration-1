@@ -143,7 +143,6 @@ class kyTicketStatus extends kyObjectBase {
 		$this->title = $data['title'];
 		$this->display_order = intval($data['displayorder']);
 		$this->department_id = ky_assure_positive_int($data['departmentid']);
-		$this->display_icon = $data['displayicon'];
 		$this->type = $data['type'];
 		$this->mark_as_resolved = ky_assure_bool($data['markasresolved']);
 		$this->display_count = ky_assure_bool($data['displaycount']);
@@ -220,14 +219,6 @@ class kyTicketStatus extends kyObjectBase {
 
 		$this->department = kyDepartment::get($this->department_id);
 		return $this->department;
-	}
-
-	/**
-	 * Returns path to icon displayed in GUI for this ticket status.
-	 * @return string
-	 */
-	public function getDisplayIcon() {
-		return $this->display_icon;
 	}
 
 	/**

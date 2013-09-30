@@ -95,7 +95,6 @@ class kyTicketType extends kyObjectBase {
 		$this->title = $data['title'];
 		$this->display_order = intval($data['displayorder']);
 		$this->department_id = ky_assure_positive_int($data['departmentid']);
-		$this->display_icon = $data['displayicon'];
 		$this->type = $data['type'];
 		$this->user_visibility_custom = ky_assure_bool($data['uservisibilitycustom']);
 		if ($this->user_visibility_custom && is_array($data['usergroupid'])) {
@@ -165,15 +164,6 @@ class kyTicketType extends kyObjectBase {
 
 		$this->department = kyDepartment::get($this->department_id);
 		return $this->department;
-	}
-
-	/**
-	 * Returns path to icon displayed in GUI for this ticket type.
-	 *
-	 * @return string
-	 */
-	public function getDisplayIcon() {
-		return $this->display_icon;
 	}
 
 	/**
