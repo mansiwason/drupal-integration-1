@@ -5,12 +5,12 @@
  * Kayako Drupal Integration
  * _______________________________________________
  *
- * @author		Varun Shoor
+ * @author         Varun Shoor
  *
- * @package		KayakoClient
- * @copyright	Copyright (c) 2001-2015, Kayako
- * @license		FreeBSD
- * @link		https://github.com/kayako/drupal-integration
+ * @package        KayakoClient
+ * @copyright      Copyright (c) 2001-2015, Kayako
+ * @license        FreeBSD
+ * @link           https://github.com/kayako/drupal-integration
  *
  * ###############################################
  */
@@ -201,7 +201,7 @@ function kayako_help($path, $arg)
 	 */
 	function kayako_form_validate($form, &$form_state)
 	{
-	//Form Validation can be done here
+		//Form Validation can be done here
 	}
 
 	/**
