@@ -1,4 +1,19 @@
 <?php
+/**
+ * ###############################################
+ *
+ * Kayako Drupal Integration
+ * _______________________________________________
+ *
+ * @author		Varun Shoor
+ *
+ * @package		KayakoClient
+ * @copyright	Copyright (c) 2001-2015, Kayako
+ * @license		FreeBSD
+ * @link		https://github.com/kayako/drupal-integration
+ *
+ * ###############################################
+ */
 
 /**
  * Displays help and module information.
@@ -38,7 +53,6 @@ function kayako_help($path, $arg)
 
 		return $tickets->getRawArray();
 	}
-
 
 	/**
 	 * Implements hook_menu().
@@ -187,7 +201,7 @@ function kayako_help($path, $arg)
 	 */
 	function kayako_form_validate($form, &$form_state)
 	{
-//Form Validation can be done here
+	//Form Validation can be done here
 	}
 
 	/**

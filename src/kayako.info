@@ -1,5 +1,5 @@
 name = Kayako Help Desk
-description = A block module that lists links to recent posts.
+description = A basic functionality of ticket creation and status checking.
 core = 7.x
 
 configure = admin/config/content/kayako
