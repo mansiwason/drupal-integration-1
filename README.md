@@ -12,11 +12,11 @@ User only needs to log in to the website and he will be able to create/view/upda
 
 Features
 =======================
-*Users can create tickets from Drupal based website.
-*Users can view tickets in Native Drupal UI.
-*Users can reply or update tickets
+* Users can create tickets from Drupal based website.
+* Users can view tickets in Native Drupal UI.
+* Users can reply or update tickets
 
 Supported versions
 =======================
-Kayako: v4.51.1891 and above
-Drupal: Drupal 7
+* Kayako: v4.51.1891 and above
+* Drupal: Drupal 7
