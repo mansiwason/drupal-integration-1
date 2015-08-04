@@ -145,12 +145,12 @@ function kayako_help($path, $arg)
 		];
 		try {
 			initKayako();
-			$stasuses_resultset   = kyTicketStatus::getAll()
-												  ->getRawArray();
-			$priorities_resultset = kyTicketPriority::getAll()
-													->getRawArray();
-			$types_resultset      = kyTicketType::getAll()
-												->getRawArray();
+			$stasuses_resultset   = kyTicketStatus::getAll()->filterByType(kyTicketStatus::TYPE_PUBLIC)->getRawArray();
+
+			$priorities_resultset = kyTicketPriority::getAll()->filterByType(kyTicketPriority::TYPE_PUBLIC)->getRawArray();
+
+			$types_resultset      = kyTicketType::getAll()->filterByType(kyTicketType::TYPE_PUBLIC)->getRawArray();
+
 			$statuses             = [];
 			$types                = [];
 			$priorities           = [];
@@ -334,12 +334,12 @@ function kayako_help($path, $arg)
 		} else {
 			initKayako();
 			$ticket               = kyTicket::get($ticket_id);
-			$stasuses_resultset   = kyTicketStatus::getAll()
-												  ->getRawArray();
-			$priorities_resultset = kyTicketPriority::getAll()
-													->getRawArray();
-			$types_resultset      = kyTicketType::getAll()
-												->getRawArray();
+			$stasuses_resultset   = kyTicketStatus::getAll()->filterByType(kyTicketStatus::TYPE_PUBLIC)->getRawArray();
+
+			$priorities_resultset = kyTicketPriority::getAll()->filterByType(kyTicketPriority::TYPE_PUBLIC)->getRawArray();
+
+			$types_resultset      = kyTicketType::getAll()->filterByType(kyTicketType::TYPE_PUBLIC)->getRawArray();
+
 			$statuses             = [];
 			$types                = [];
 			$priorities           = [];
@@ -719,12 +719,12 @@ function kayako_help($path, $arg)
 	{
 		// department id will be available as => $form_state['storage']['step_one_values']['department']
 		initKayako();
-		$stasuses_resultset   = kyTicketStatus::getAll()
-											  ->getRawArray();
-		$priorities_resultset = kyTicketPriority::getAll()
-												->getRawArray();
-		$types_resultset      = kyTicketType::getAll()
-											->getRawArray();
+		$stasuses_resultset   = kyTicketStatus::getAll()->filterByType(kyTicketStatus::TYPE_PUBLIC)->getRawArray();
+
+		$priorities_resultset = kyTicketPriority::getAll()->filterByType(kyTicketPriority::TYPE_PUBLIC)->getRawArray();
+
+		$types_resultset      = kyTicketType::getAll()->filterByType(kyTicketType::TYPE_PUBLIC)->getRawArray();
+
 		$statuses             = [];
 		$types                = [];
 		$priorities           = [];
