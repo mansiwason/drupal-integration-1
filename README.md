@@ -1,4 +1,4 @@
-Kayako Ruby API library
+Kayako Drupal Integration
 =======================
 
 This library is maintained by Kayako.
