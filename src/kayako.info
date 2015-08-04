@@ -1,0 +1,6 @@
+name = Kayako Help Desk
+description = A basic functionality of ticket creation and status checking.
+core = 7.x
+
+configure = admin/config/content/kayako
+stylesheets[all][] = resources/css/all.css
